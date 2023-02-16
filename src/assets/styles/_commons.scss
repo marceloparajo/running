@@ -24,15 +24,15 @@ html {
 
 .button {
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 100px;
     line-height: 43px;
     width: 100%;
     transition: ease .2s;
 
-    &--orange {
-        background: var(--color-a);
+    &--cta {
+        background: var(--color-cta);
         &:hover {
-            background: var(--color-a-hover);
+            background: var(--color-cta-hover);
         }
     }
     &--blue {
@@ -43,11 +43,26 @@ html {
     }
 }
 
-.container {
-    width: 100%;
-    max-width: 1360px;
-    margin-left: auto;
-    margin-right: auto;
+.button-copy {
+    border: 1px solid #F1F1F1;
+    border-radius: 14px;
+    background: white;
+    font-size: 14px;
+    line-height: 26px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-text);
+    margin-top: 20px;
+    padding: 0 14px;
+    cursor: pointer;
+
+    &:active {
+        background-color: #F1F1F1;
+        transform: translateY(1px);
+        box-shadow: -1px -1px 0 0 rgba(0,0,0,.2);
+    }
 }
 
 .uppercase {
@@ -56,8 +71,8 @@ html {
 
 .header {
     background: var(--black);
-    border-radius: 10px;
-    background: rgba(0,0,0,.8);
+    border-radius: 100px;
+    background: rgba(242, 160, 160, 0.85);
     position: fixed;
     top: 10px;
     left: 18px;
@@ -85,7 +100,7 @@ html {
 
     &__menu-item {
         line-height: 43px;
-        font-size: 15px;
+        font-size: 14px;
         a {
             text-decoration: none;
             color: white;
@@ -98,17 +113,21 @@ html {
             margin-left: 23px;
         }
         .button {
-            font-size: 15px;
+            font-size: 14px;
         }
 
         >ul {
             display: none;
         }
     }
+    &__menu-icon {
+        width: 11px;
+        height: 10px;
+    }
 }
 
 .footer {
-    background: var(--black);
+    background: var(--color-text);
     color: white;
 
     &__container {
@@ -164,8 +183,4 @@ html {
         gap: 25px;
         width: 100%;
     }
-}
-
-.d-sm-none {
-    display: none!important;
 }
