@@ -14,18 +14,13 @@ html {
     font-weight: 400;
 }
 
-.button--link {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    gap: 9px;
-    align-items: center;
+img {
+    display: block;
 }
 
 .button {
     justify-content: center;
     border-radius: 100px;
-    line-height: 43px;
     width: 100%;
     transition: ease .2s;
 
@@ -41,27 +36,66 @@ html {
             background: var(--color-b-hover);
         }
     }
-}
+    &--link {
+        text-decoration: none;
+        color: white;
+        display: flex;
+        gap: 9px;
+        align-items: center;
+    }
 
-.button-copy {
-    border: 1px solid #F1F1F1;
-    border-radius: 14px;
-    background: white;
-    font-size: 14px;
-    line-height: 26px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    font-family: var(--font-text);
-    margin-top: 20px;
-    padding: 0 14px;
-    cursor: pointer;
+    &-copy {
+        border: 1px solid #F1F1F1;
+        border-radius: 14px;
+        background: white;
+        font-size: 14px;
+        line-height: 26px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        font-family: var(--font-text);
+        padding: 0 14px;
+        cursor: pointer;
+        position: relative;
+    
+        &:active {
+            background-color: #F1F1F1;
+            transform: translateY(1px);
+            box-shadow: -1px -1px 0 0 rgba(0,0,0,.2);
+        }
+    }
 
-    &:active {
-        background-color: #F1F1F1;
-        transform: translateY(1px);
-        box-shadow: -1px -1px 0 0 rgba(0,0,0,.2);
+    &-copy-container {
+        margin-top: 20px;
+        .tooltip {
+            opacity: 0;
+            display: inline-block;
+            margin-left: 16px;
+            background: black;
+            font-size: 14px;
+            line-height: 14px;
+            color: white;
+            font-family: var(--font-text);
+            border-radius: 6px;
+            white-space: nowrap;
+            padding: 6px 15px 8px;
+            transition: ease .3s;
+            position: absolute;
+            &:before {
+                content: "";
+                position: absolute;
+                left: -7px;
+                top: 6px;
+                border-right: 12px solid black;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+            }
+            &.copiado {
+                opacity: 1;
+            }
+        }
+
     }
 }
 
@@ -79,12 +113,6 @@ html {
     right: 18px;
     z-index: 2;
 
-    
-    * {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-text-stroke: 0.45px rgba(255,255,255, 0.1);
-    }
-
     &__logo {
         display: none;
     }
@@ -99,30 +127,26 @@ html {
     }
 
     &__menu-item {
-        line-height: 43px;
+        line-height: 35px;
         font-size: 14px;
+        margin-left: 10px;
         a {
             text-decoration: none;
             color: white;
             display: flex;
-            gap: 9px;
+            gap: 6px;
             align-items: center;
         } 
         &-button {
             width: 117px;
-            margin-left: 23px;
         }
-        .button {
-            font-size: 14px;
-        }
-
         >ul {
             display: none;
         }
     }
     &__menu-icon {
-        width: 11px;
-        height: 10px;
+        width: 12px;
+        height: 11px;
     }
 }
 
@@ -160,13 +184,13 @@ html {
 
     &__sponsors-brand {
         height: 100px;
+        width: 119px;
 
         figure {
-            height: 100px;
 
             img {
-                width: 100%;
-                height: 100%;
+                width: 119px;
+                height: 100px;
             }
         }
     }
