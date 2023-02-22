@@ -2,3 +2,23 @@
     @import "responsive/commons"; 
     @import "responsive/general"; 
 }
+
+@media (min-width: 1200px) {
+    .module {
+        
+        &__media {
+            max-height: 508px;
+            overflow: hidden;
+            figure {
+                width: 100%;
+                height: 100%;
+                position: relative; 
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

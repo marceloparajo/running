@@ -19,8 +19,16 @@
     &__logo {
         position: absolute;
         display: block;
-        top: -16px;
+        top: -13px;
         left: 37px;
+        width: 147px;
+        figure {
+            width: 100%;
+            img {
+                width: 100%;
+                filter: drop-shadow(0px 4px 46px rgba(255, 255, 255, 0.83));
+            }
+        }
     }
 
     &__menu {
@@ -77,16 +85,6 @@
         padding-top: 27px;
     }
 }
-
-
-.d-sm-none {
-    display: block!important;
-}
-.d-lg-none {
-    display: none!important;
-}
-
-
 
 .bounce {
     &:hover {
